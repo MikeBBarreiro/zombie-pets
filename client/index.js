@@ -1,13 +1,13 @@
 (function(){
   'use strict';
 
-  angular.module('mean-template', [])
+  angular.module('zombie-pets', [])
   .controller('MainController', ['$scope', '$interval', function($scope, $interval){
-    var occupations = ['Superheroes', 'Ninjas', 'Pirates', 'Vampires', 'Aliens', 'Dragons', 'Sharks with Lasers', 'Transformers', 'I am Groot'];
+    var occupations = ['Distruction', 'Fluffyness', 'Danger', 'Chaos', 'Fluff', 'More Fluff', 'Lazers', 'Transformers', 'Madness'];
 
-    $scope.title = 'Mean Template';
+    $scope.title = 'zombie-pets';
     $scope.occupation = occupations[0];
-
+//$intervals is like a loop
     $interval(function(){
       var rnd = Math.floor(Math.random() * occupations.length);
       $scope.occupation = occupations[rnd];
